@@ -17,6 +17,17 @@ protected:
     int perHourSalary;
 
 public:
+    void setValues(){
+        cout<<"Enter employee name : "<<endl;
+        cin>>name;
+        cout<<"Enter employee ID : "<<endl;
+        cin>>id;
+        cout<<"Enter working hours of employee "<<name << " is "<<endl;
+        cin>>workingHours;
+        cout<<"Enter per hour salary of "<<name<<" is "<<endl;
+        cin>>perHourSalary;
+    }
+
     int calcSalary()
     {
         int totalSalary = perHourSalary * workingHours;
@@ -52,11 +63,7 @@ public:
 int main()
 {
     Adhoc_employee newEmp;
-    newEmp.setDetails(
-        "Tahir",
-        23,
-        8,
-        250);
+    newEmp.setValues();
     newEmp.calcSalary();
     newEmp.display_info();
     return 0;
